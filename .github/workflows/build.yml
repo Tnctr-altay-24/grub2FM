@@ -19,7 +19,9 @@ jobs:
         python-version: 3.12
 
     - name: Get packages
-      run: pip install gitpython requests
+      run: |
+        sudo apt install -y python3-pip
+        sudo apt install -y python3-venv
         sudo apt-get update
         sudo -e apt-get install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64
     - name: bootstrap

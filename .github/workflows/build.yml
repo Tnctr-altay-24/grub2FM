@@ -27,7 +27,7 @@ jobs:
         sudo apt install g++-mingw-w64-x86-64-posix
         sudo apt install gcc-mingw-w64-x86-64-posix
         sudo apt-get install gcc-13-arm-linux-gnueabihf-base
-        sudo -e apt-get -y install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi
+        sudo -e apt-get -y install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-ggnueabihf-base
     - name: bootstrap
       run: ./bootstrap
 

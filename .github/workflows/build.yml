@@ -11,12 +11,12 @@ jobs:
     steps:
     - name: checkout
     - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64 
+      with:
+        fetch-depth: 0
+    - name: install dependencies
+      run: |
+        sudo apt-get update
+        sudo -e apt-get install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64 
     - name: bootstrap
       run: ./bootstrap
 

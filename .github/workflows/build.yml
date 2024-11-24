@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: checkout
     - uses: actions/checkout@v4
-    - name: install dependencies
+    - name: initialize
       run: |
         sudo apt-get update
         sudo -e apt-get install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64 

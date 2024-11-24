@@ -6,11 +6,21 @@ on:
       - master
 
 jobs:
+  gcc:
+    name: Build (gcc)
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Install packages
+        run: |
+          sudo apt update
+          sudo apt install -y -o
   build:
     runs-on: ubuntu-20.04
     steps:
     - name: checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
     - name: Install packages
       run: |
         sudo apt-get update

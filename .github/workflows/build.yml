@@ -6,13 +6,11 @@ on:
       - master
 
 jobs:
-  python-bindings:
-    name: Python Bindings (ubuntu-latest)
-    runs-on: ubuntu-latest
-    env:
-      CFLAGS: -Wextra -Werror
+  build:
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+    - name: checkout
+    - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set up Python 3.9

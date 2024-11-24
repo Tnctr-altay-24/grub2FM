@@ -27,6 +27,8 @@ jobs:
         sudo apt install g++-mingw-w64-x86-64-posix
         sudo apt install gcc-mingw-w64-x86-64-posix
         sudo apt-get install gcc-13-arm-linux-gnueabihf-base
+        sudo apt -qq update
+        sudo apt install -y
         sudo -e apt-get install build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64 gcc-mingw-w64-x86-64 gcc-mingw-w64-x86-64-posix 
     - name: bootstrap
       run: ./bootstrap

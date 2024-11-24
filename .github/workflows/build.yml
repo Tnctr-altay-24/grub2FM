@@ -6,16 +6,6 @@ on:
       - master
 
 jobs:
-  gcc:
-    name: Build (gcc)
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-      - name: Install packages
-        run: |
-          sudo apt update
-          sudo apt install -y -o
   build:
     runs-on: ubuntu-20.04
     steps:
@@ -24,7 +14,7 @@ jobs:
     - name: Install packages
       run: |
         sudo apt-get update
-        sudo -e apt-get install -y -o build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64 
+        sudo -e apt-get install -y -o build-essential python-is-python3 iasl lzop unifont autopoint bison flex gettext gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi gcc-mingw-w64-linux-gnu 
     - name: bootstrap
       run: ./bootstrap
 
